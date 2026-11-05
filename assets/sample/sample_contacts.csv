@@ -1,0 +1,6 @@
+Beneficiary Name,Mobile Number,Email Address,Account Number,IFSC Code,Bank Name,Notes
+PERAMBATH EXPORTS IMPORTS,+91 9876543210,accounts@perambath.com,XXXXXXXX0106,HDFC0001535,HDFC Bank,Key vendor
+ameen,+91 9845012345,ameen@example.com,50100584372675,HDFC0001535,HDFC Bank,Freelance supplier
+Apex Solutions PVT LTD,+91 8023456789,finance@apexsol.com,9180200388412,ICIC0000047,ICICI Bank,IT services
+Test Vendor Corp,+91 9988776655,vendor@example.com,998877665544,SBIN0001234,State Bank of India,Office supplies
+Bulk Vendor 1,+91 9123456780,bulkvendor@example.com,111122223333,HDFC0009999,HDFC,Wholesale distribution

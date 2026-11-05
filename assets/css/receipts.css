@@ -1,0 +1,548 @@
+/* assets/css/receipts.css - Receipt Styles & Visual Themes */
+
+/* Base Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printableReceiptArea, #printableReceiptArea * {
+        visibility: visible;
+    }
+    #printableReceiptArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* ========================================================
+   TEMPLATE 1: BLUE TRANSACTION RECEIPT (IMAGE 1 REFERENCE)
+   ======================================================== */
+.receipt-template-1 {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    margin: 0 auto;
+}
+
+.receipt-t1-header {
+    background-color: #0284c7 !important;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: #ffffff !important;
+    padding: 18px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.receipt-t1-header h3,
+.dark .receipt-t1-header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.receipt-t1-body {
+    padding: 24px 28px;
+}
+
+.receipt-t1-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: 13.5px;
+}
+
+.receipt-t1-label {
+    color: #64748b;
+    font-weight: 400;
+}
+
+.receipt-t1-value {
+    color: #0f172a;
+    font-weight: 600;
+    text-align: right;
+}
+
+.receipt-t1-status-success {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.receipt-t1-status-pending {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.receipt-t1-status-failed {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.receipt-t1-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.receipt-t1-divider {
+    height: 1px;
+    background-color: #f1f5f9;
+    margin: 18px 0;
+}
+
+.receipt-t1-section-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+/* ========================================================
+   TEMPLATE 2: PEACH PAYMENT SLIP (IMAGE 2 REFERENCE)
+   ======================================================== */
+.receipt-template-2 {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    border: 1px solid #f1f5f9;
+    padding: 28px 24px;
+    margin: 0 auto;
+}
+
+.receipt-t2-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 22px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.receipt-t2-card {
+    background-color: #FFF7F2;
+    border-radius: 18px;
+    padding: 26px 20px;
+    text-align: center;
+    border: 1px solid #FFEDD5;
+    margin-bottom: 24px;
+}
+
+.receipt-t2-badge-circle {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.receipt-t2-badge-circle svg {
+    display: block;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto;
+}
+
+.receipt-t2-status-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #78716C;
+    margin-bottom: 4px;
+}
+
+.receipt-t2-status-text {
+    font-size: 19px;
+    font-weight: 800;
+    color: #EA580C;
+    margin-bottom: 16px;
+}
+
+.receipt-t2-amount-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #78716C;
+    margin-bottom: 4px;
+}
+
+.receipt-t2-amount-text {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.receipt-t2-list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13.5px;
+}
+
+.receipt-t2-list-row:last-child {
+    border-bottom: none;
+}
+
+.receipt-t2-list-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.receipt-t2-list-value {
+    color: #0f172a;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* ========================================================
+   TEMPLATE 3: GREEN BANK TRANSFER MODAL (IMAGE 3 REFERENCE)
+   ======================================================== */
+.receipt-template-3 {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    border: 2px solid #719ec2;
+    padding: 24px 26px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.receipt-t3-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-t3-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.receipt-t3-amount-text {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #00b65a;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.receipt-t3-status-sub {
+    text-align: center;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+.receipt-t3-details-table {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.receipt-t3-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 13px;
+    font-size: 13.5px;
+}
+
+.receipt-t3-label {
+    width: 165px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #7a8b9e;
+    letter-spacing: 0.4px;
+}
+
+.receipt-t3-val {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: left;
+}
+
+.receipt-t3-view-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 18px 0;
+}
+
+.receipt-t3-view-details svg {
+    margin-bottom: 4px;
+}
+
+.receipt-t3-view-details-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7a8b9e;
+}
+
+.receipt-t3-btn-primary {
+    width: 100%;
+    background-color: #1e7c94;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.receipt-t3-btn-primary:hover {
+    background-color: #176579;
+}
+
+.receipt-t3-btn-secondary {
+    width: 100%;
+    background-color: transparent;
+    color: #1e7c94;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10.5px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #1e7c94;
+    box-sizing: border-box;
+    display: block;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.receipt-t3-btn-secondary:hover {
+    background-color: #f0fdfa;
+}
+
+/* Drag and Drop Zone in Image 3 */
+.dropzone-dashed {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropzone-dashed:hover, .dropzone-dashed.dragover {
+    border-color: #0284c7;
+    background-color: #f0f9ff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ========================================================
+   GLOBAL DARK THEME SUPPORT
+   ======================================================== */
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark header {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+.dark footer {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+    color: #94a3b8 !important;
+}
+
+.dark .bg-white {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+    color: #f1f5f9;
+}
+
+.dark .bg-slate-50 {
+    background-color: #0b1120 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800 {
+    color: #f8fafc !important;
+}
+
+.dark .text-slate-700,
+.dark .text-slate-600 {
+    color: #cbd5e1 !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-400 {
+    color: #94a3b8 !important;
+}
+
+.dark .border-slate-200,
+.dark .border-slate-100 {
+    border-color: #1e293b !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #64748b !important;
+}
+
+.dark .dropzone-dashed {
+    background-color: #0b1120 !important;
+    border-color: #334155 !important;
+}
+
+.dark .dropzone-dashed:hover,
+.dark .dropzone-dashed.dragover {
+    border-color: #38bdf8 !important;
+    background-color: #0f172a !important;
+}
+
+.dark #receiptCaptureWrapper {
+    background-color: #0b1120 !important;
+    border-color: #1e293b !important;
+}
+
+/* Preserve crisp paper receipt appearance for export */
+.receipt-template-1,
+.receipt-template-2,
+.receipt-template-3,
+.dark .receipt-template-1,
+.dark .receipt-template-2,
+.dark .receipt-template-3,
+#previewTemplate1,
+#previewTemplate2,
+#previewTemplate3,
+#historyCaptureCard {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+}
+
+.receipt-template-1 *,
+.receipt-template-2 *,
+.receipt-template-3 *,
+.dark .receipt-template-1 *,
+.dark .receipt-template-2 *,
+.dark .receipt-template-3 * {
+    color-scheme: light;
+}
+
+.dark .receipt-t1-row .receipt-t1-label {
+    color: #64748b !important;
+}
+
+.dark .receipt-t1-row .receipt-t1-value,
+.dark .receipt-t1-amount {
+    color: #0f172a !important;
+}
+
+.dark .receipt-t2-amount-text {
+    color: #0f172a !important;
+}
+
+.dark .receipt-t2-list-label {
+    color: #64748b !important;
+}
+
+.dark .receipt-t2-list-value {
+    color: #0f172a !important;
+}
+
+.dark .receipt-t3-amount-text {
+    color: #00b65a !important;
+}
+
+.dark .receipt-t3-status-sub {
+    color: #1e293b !important;
+}
+
+.dark .receipt-t3-label {
+    color: #7a8b9e !important;
+}
+
+.dark .receipt-t3-val {
+    color: #1e293b !important;
+}
+
+.dark .receipt-t3-btn-primary {
+    background-color: #1e7c94 !important;
+    color: #ffffff !important;
+}
+
+.dark .receipt-t3-btn-secondary {
+    background-color: transparent !important;
+    color: #1e7c94 !important;
+    border-color: #1e7c94 !important;
+}
+
+
