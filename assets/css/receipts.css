@@ -63,20 +63,32 @@
 .receipt-t1-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 18px;
     font-size: 13.5px;
+    gap: 12px;
 }
 
 .receipt-t1-label {
     color: #64748b;
     font-weight: 400;
+    flex-shrink: 0;
 }
 
 .receipt-t1-value {
     color: #0f172a;
     font-weight: 600;
     text-align: right;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.receipt-t1-value.font-mono,
+#p1_txid {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    letter-spacing: -0.2px;
 }
 
 .receipt-t1-status-success {
@@ -201,10 +213,11 @@
 .receipt-t2-list-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 14px 0;
     border-bottom: 1px solid #f1f5f9;
     font-size: 13.5px;
+    gap: 12px;
 }
 
 .receipt-t2-list-row:last-child {
@@ -214,12 +227,23 @@
 .receipt-t2-list-label {
     color: #64748b;
     font-weight: 500;
+    flex-shrink: 0;
 }
 
 .receipt-t2-list-value {
     color: #0f172a;
     font-weight: 700;
     text-align: right;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.receipt-t2-list-value.font-mono,
+#p2_txid {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    letter-spacing: -0.2px;
 }
 
 /* ========================================================
@@ -287,24 +311,36 @@
     align-items: baseline;
     margin-bottom: 13px;
     font-size: 13.5px;
+    gap: 8px;
 }
 
 .receipt-t3-label {
-    width: 165px;
+    width: 135px;
+    max-width: 42%;
     flex-shrink: 0;
     text-transform: uppercase;
     font-size: 11.5px;
     font-weight: 700;
     color: #7a8b9e;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
 }
 
 .receipt-t3-val {
     flex: 1;
+    min-width: 0;
     font-size: 14px;
     font-weight: 700;
     color: #1e293b;
     text-align: left;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.receipt-t3-val.font-mono,
+#p3_utr {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    letter-spacing: -0.2px;
 }
 
 .receipt-t3-view-details {
@@ -543,6 +579,92 @@
     background-color: transparent !important;
     color: #1e7c94 !important;
     border-color: #1e7c94 !important;
+}
+
+/* ========================================================
+   RESPONSIVE MOBILE VIEW STYLES (≤ 480px)
+   Prevents text clipping, adjusts padding & typography
+   ======================================================== */
+@media (max-width: 480px) {
+    /* Template 3 Mobile Optimization */
+    .receipt-template-3 {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+    .receipt-t3-amount-text {
+        font-size: 25px;
+    }
+    .receipt-t3-status-sub {
+        font-size: 13.5px;
+        margin-bottom: 18px;
+    }
+    .receipt-t3-row {
+        margin-bottom: 11px;
+        gap: 6px;
+    }
+    .receipt-t3-label {
+        width: 114px;
+        font-size: 10.5px;
+        letter-spacing: 0.2px;
+    }
+    .receipt-t3-val {
+        font-size: 13px;
+    }
+    .receipt-t3-val.font-mono,
+    #p3_utr {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+        line-height: 1.35;
+    }
+    .receipt-t3-btn-primary,
+    .receipt-t3-btn-secondary {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* Template 2 Mobile Optimization */
+    .receipt-template-2 {
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+    .receipt-t2-title {
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+    .receipt-t2-amount-text {
+        font-size: 28px;
+    }
+    .receipt-t2-list-row {
+        padding: 11px 0;
+        font-size: 13px;
+        gap: 8px;
+    }
+    .receipt-t2-list-value.font-mono,
+    #p2_txid {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+    }
+
+    /* Template 1 Mobile Optimization */
+    .receipt-t1-header {
+        padding: 18px 20px;
+    }
+    .receipt-t1-header h3 {
+        font-size: 16px;
+    }
+    .receipt-t1-body {
+        padding: 18px 16px;
+    }
+    .receipt-t1-row {
+        margin-bottom: 14px;
+        font-size: 13px;
+        gap: 8px;
+    }
+    .receipt-t1-value.font-mono,
+    #p1_txid {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+    }
 }
 
 

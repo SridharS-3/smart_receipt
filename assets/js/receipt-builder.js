@@ -345,7 +345,14 @@ async function downloadReceiptPNG() {
             scale: 3, // High DPI clarity
             useCORS: true,
             backgroundColor: '#ffffff',
-            logging: false
+            logging: false,
+            onclone: (clonedDoc) => {
+                const el = clonedDoc.getElementById(targetEl.id);
+                if (el) {
+                    el.style.width = '440px';
+                    el.style.maxWidth = '440px';
+                }
+            }
         });
 
         canvas.toBlob((blob) => {
@@ -384,7 +391,14 @@ async function downloadReceiptPDF() {
             scale: 2.5,
             useCORS: true,
             backgroundColor: '#ffffff',
-            logging: false
+            logging: false,
+            onclone: (clonedDoc) => {
+                const el = clonedDoc.getElementById(targetEl.id);
+                if (el) {
+                    el.style.width = '440px';
+                    el.style.maxWidth = '440px';
+                }
+            }
         });
 
         const imgData = canvas.toDataURL('image/png');

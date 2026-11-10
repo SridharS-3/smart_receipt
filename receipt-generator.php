@@ -238,7 +238,7 @@ include_once __DIR__ . '/includes/header.php';
             </div>
 
             <!-- Receipt Container Wrapper for High-DPI Capture -->
-            <div id="receiptCaptureWrapper" class="p-4 bg-slate-100/70 rounded-2xl border border-slate-200/80 shadow-inner w-full flex justify-center">
+            <div id="receiptCaptureWrapper" class="p-2 sm:p-4 bg-slate-100/70 dark:bg-slate-800/50 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-inner w-full flex justify-center">
 
                 <!-- ============================================ -->
                 <!-- TEMPLATE 1: BLUE TRANSACTION RECEIPT (IMAGE 1) -->

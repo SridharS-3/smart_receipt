@@ -310,7 +310,18 @@ async function downloadModalReceipt(row, tpl) {
     btn.disabled = true;
 
     try {
-        const canvas = await html2canvas(target, { scale: 3, useCORS: true, backgroundColor: '#ffffff' });
+        const canvas = await html2canvas(target, { 
+            scale: 3, 
+            useCORS: true, 
+            backgroundColor: '#ffffff',
+            onclone: (clonedDoc) => {
+                const el = clonedDoc.querySelector('#modalReceiptContainer > div');
+                if (el) {
+                    el.style.width = '440px';
+                    el.style.maxWidth = '440px';
+                }
+            }
+        });
         canvas.toBlob((blob) => {
             saveAs(blob, `Receipt_${row.utr}_${row.name.replace(/\s+/g, '_')}.png`);
             showNotification('Image receipt downloaded!', 'success');
@@ -333,7 +344,18 @@ async function downloadModalPDF(row, tpl) {
     btn.disabled = true;
 
     try {
-        const canvas = await html2canvas(target, { scale: 2.5, useCORS: true, backgroundColor: '#ffffff' });
+        const canvas = await html2canvas(target, { 
+            scale: 2.5, 
+            useCORS: true, 
+            backgroundColor: '#ffffff',
+            onclone: (clonedDoc) => {
+                const el = clonedDoc.querySelector('#modalReceiptContainer > div');
+                if (el) {
+                    el.style.width = '440px';
+                    el.style.maxWidth = '440px';
+                }
+            }
+        });
         const imgData = canvas.toDataURL('image/png');
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF('p', 'mm', 'a4');
